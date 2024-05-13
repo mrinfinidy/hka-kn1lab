@@ -48,6 +48,8 @@ public class Sender {
 
         // Iteration über den Konsolentext
 
+        String resultReceiver = "";
+        
         while (count <= words.length) {
             byte[] payloadOut;
             if(count == words.length) {
@@ -83,6 +85,10 @@ public class Sender {
                 System.out.println("S -> C: " + " ACKnum: " + packetIn.getAckNum() + " seq: " + packetIn.getSeq() 
                 + " length: " + packetIn.getPayload().length + " payload: " + rcvmsg);
 
+                if (!rcvmsg.equals("EOT")) {
+                    resultReceiver = resultReceiver.concat(" " + rcvmsg);
+                }
+
                 if(packetIn.getAckNum() == seq + payloadOut.length) {
                     count ++;
                     seq = seq + payloadOut.length;
@@ -95,6 +101,8 @@ public class Sender {
             	System.out.println("Receive timed out, retrying...");
             }
         }
+        
+        System.out.println("Receiver:" + resultReceiver);
         
         // Wenn alle Packete versendet und von der Gegenseite bestätigt sind, Programm beenden
         clientSocket.close();
