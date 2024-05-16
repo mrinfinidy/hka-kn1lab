@@ -34,7 +34,7 @@ public class Sender {
         int count = 0;
         int seq = 1;
         int ackNum = 1; 
-        boolean ackFlag = true;
+        boolean ackFlag = false;
         
    	    //Text einlesen und in Worte zerlegen
         Scanner in = new Scanner(System.in);
