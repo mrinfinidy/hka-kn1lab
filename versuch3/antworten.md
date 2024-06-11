@@ -49,12 +49,20 @@ PING 10.0.1.2 (10.0.1.2) 56(84) bytes of data.
 5 packets transmitted, 5 received, 0% packet loss, time 4082ms
 rtt min/avg/max/mdev = 0.059/0.101/0.121/0.024 ms
 ### 1.5 Traceroute
-#### Route: ben -> nas
+mininet> ben traceroute -m 5 10.0.1.2
+traceroute to 10.0.1.2 (10.0.1.2), 5 hops max, 60 byte packets
+ 1  10.0.0.1 (10.0.0.1)  0.085 ms !N  0.016 ms !N *
+
+mininet> ela traceroute -m 5 10.0.1.2
+traceroute to 10.0.1.2 (10.0.1.2), 5 hops max, 60 byte packets
+ 1  10.0.0.1 (10.0.0.1)  0.142 ms !N  0.040 ms !N *
+#### Nach Aufgabe 2
+##### Route: ben -> nas
 mininet> ben traceroute -m 5 10.0.1.2
 traceroute to 10.0.1.2 (10.0.1.2), 5 hops max, 60 byte packets
  1  10.0.0.1 (10.0.0.1)  0.102 ms  0.036 ms  0.030 ms
  2  10.0.1.2 (10.0.1.2)  0.056 ms  0.043 ms  0.040 ms
-#### Route: burak-> nas 
+##### Route: burak-> nas 
 mininet> burak traceroute -m 5 10.0.1.2
 traceroute to 10.0.1.2 (10.0.1.2), 5 hops max, 60 byte packets
  1  10.0.2.1 (10.0.2.1)  0.164 ms  0.036 ms  0.030 ms
