@@ -57,3 +57,14 @@ Start the daemon: `sudo launchctl load /Library/LaunchDaemons/com.canonical.mult
 ### [Versuch 2 - Transportschicht](versuch2/aufgabenstellung.md)
 ### [Versuch 3 - Vermittlungsschicht](versuch3/aufgabenstellung.md)
 ### [Versuch 4 - Leistungsmessung](versuch4/aufgabenstellung.md)
+
+## Multipass Remote Connection
+This section explains how to remotely connect to an existing Multipass instance.
+This guide will asume that port forwarding on the router is disabled.
+1. Launch Multipass instance
+2. Add the remote machine's public key to the instance's known hosts file
+3. Find out the IP of the instance: `multipass info`
+4. Tunnel the connection with ngrok and use port 22 for ssh: `ngrok tcp <instance-ip>:22`
+5. Ssh to tunneled instance: `ssh labrat@<ngrok-url> -p <ngrok-port>`
+
+Ngrok configuration: `ngrok config add-authtoken <authtoken>`
