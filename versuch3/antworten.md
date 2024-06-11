@@ -4,6 +4,16 @@
 ### 1.3 Ping Teammitglieder
 Ja
 
+mininet> ben ping -c 5 10.0.1.2
+PING 10.0.1.2 (10.0.1.2) 56(84) bytes of data.
+From 10.0.0.1 icmp_seq=1 Destination Net Unreachable
+From 10.0.0.1 icmp_seq=2 Destination Net Unreachable
+From 10.0.0.1 icmp_seq=3 Destination Net Unreachable
+From 10.0.0.1 icmp_seq=4 Destination Net Unreachable
+
+--- 10.0.1.2 ping statistics ---
+5 packets transmitted, 0 received, +4 errors, 100% packet loss, time 4056ms
+#### Nach Aufgabe 2
 mininet> pingall
 *** Ping: testing ping reachability
 ben -> X ela elias lisa lukas nas r1 X 
@@ -17,6 +27,16 @@ r1 -> ben burak ela elias lisa lukas nas r2
 r2 -> X burak X X X X nas X 
 *** Results: 30% dropped (50/72 received)
 ### 1.4 Ping Ben/NAS
+mininet> ben ping -c 5 10.0.1.2
+PING 10.0.1.2 (10.0.1.2) 56(84) bytes of data.
+From 10.0.0.1 icmp_seq=1 Destination Net Unreachable
+From 10.0.0.1 icmp_seq=2 Destination Net Unreachable
+From 10.0.0.1 icmp_seq=3 Destination Net Unreachable
+From 10.0.0.1 icmp_seq=4 Destination Net Unreachable
+
+--- 10.0.1.2 ping statistics ---
+5 packets transmitted, 0 received, +4 errors, 100% packet loss, time 4056ms
+#### Nach Aufgabe 2
 mininet> ben ping -c 5 10.0.1.2
 PING 10.0.1.2 (10.0.1.2) 56(84) bytes of data.
 64 bytes from 10.0.1.2: icmp_seq=1 ttl=63 time=0.089 ms
