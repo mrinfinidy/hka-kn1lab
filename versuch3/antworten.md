@@ -68,3 +68,11 @@ traceroute to 10.0.1.2 (10.0.1.2), 5 hops max, 60 byte packets
  1  10.0.2.1 (10.0.2.1)  0.164 ms  0.036 ms  0.030 ms
  2  10.0.1.64 (10.0.1.64)  0.057 ms  0.044 ms  0.039 ms
  3  10.0.1.2 (10.0.1.2)  0.062 ms  0.051 ms  0.051 ms
+
+
+ ## Aufgabe 2
+ 128
+
+ Aus /25 folgt die netmask 255.255.255.128 wegen 11111111.11111111.11111111.10000000
+ Die Nullen stellen den für IP-Adressen nutzbaren Bereich dar.
+ In diesem Fall sind das 7 Stellen, also folgt 2^7 = 128.
