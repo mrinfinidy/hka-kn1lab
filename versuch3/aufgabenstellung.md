@@ -29,7 +29,7 @@ Jedes Teammitglied soll seinen eigenen Arbeitsplatz mit PC erhalten. Ein Network
 1. Wir haben festgestellt, dass wir den `NAS` leider von keinem der PCs aus erreichen können. Da scheint etwas mit den Routing-Tabellen nicht zu stimmen, beheben Sie den Fehler bitte schnellstmöglich!<br>
 Tipp: Sehen Sie sich die IP-Adressen in den Tabellen genau an! Der Befehl `<knotenname-quelle> traceroute -m 5 <ziel-ip>` könnte Ihnen ebenfalls helfen. Die Argumente `-m 5` geben an, dass nach 5 Hops abgebrochen wird. Auch hier gilt, dass Sie das Argument `-n` mitgeben können, um alle Ergebnisse als IP-Adressen anzeigen zu lassen (z.B. `host1 traceroute -n host2`).
 //config für r1-eth1 10.0.1.2
-//clear env wit  'sudo mn -c' when error by runTopo
+//clear env with  'sudo mn -c' when error by runTopo
 
 ## Aufgabe 2
 
